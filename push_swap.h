@@ -6,7 +6,7 @@
 /*   By: mvalerio <mvalerio@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 20:26:35 by maggie            #+#    #+#             */
-/*   Updated: 2023/08/23 22:28:01 by mvalerio         ###   ########.fr       */
+/*   Updated: 2023/08/31 18:56:16 by mvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include "libft/libft.h"
+# include "libft/get_next_line/get_next_line.h"
 
 // Constants
 # define TOP 1
