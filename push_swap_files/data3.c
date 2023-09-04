@@ -6,11 +6,11 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 16:03:36 by maggie            #+#    #+#             */
-/*   Updated: 2023/08/11 16:07:20 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 05:14:32 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_section(t_list *lst)
 {

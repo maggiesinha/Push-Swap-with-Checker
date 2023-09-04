@@ -6,11 +6,11 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 15:56:55 by mvalerio          #+#    #+#             */
-/*   Updated: 2023/08/11 19:25:31 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 05:14:28 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 size_t	ft_lstlen(t_list *lst)
 {

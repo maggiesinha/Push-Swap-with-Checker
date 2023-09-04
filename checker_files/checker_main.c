@@ -6,11 +6,11 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 02:35:48 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 02:59:11 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 06:21:12 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	main(int argc, char *argv[])
 {
@@ -34,11 +34,22 @@ int	main(int argc, char *argv[])
 		if (!a)
 			{
 				ft_printf("Error\n");
+				ft_lstclear(&instructions, free);
+				ft_lstclear(&head_a, free);
+				ft_lstclear(&head_b, free);
 				return (0);
 			}
 		else if (a == 2)
+		{
+			ft_lstclear(&instructions, free);
+			ft_lstclear(&head_a, free);
+			ft_lstclear(&head_b, free);			
 			return (0);
+		}
 		instructions = instructions->next;
 	}
+	ft_lstclear(&instructions, free);
 	ft_ok_ko(head_a, head_b);
+	ft_lstclear(&head_a, free);
+	ft_lstclear(&head_b, free);	
 }

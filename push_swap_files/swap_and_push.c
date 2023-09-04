@@ -1,53 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_and_push_checker.c                            :+:      :+:    :+:   */
+/*   swap_and_push.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvalerio <mvalerio@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 04:15:24 by maggie            #+#    #+#             */
-/*   Updated: 2023/08/23 22:25:24 by mvalerio         ###   ########.fr       */
+/*   Updated: 2023/09/04 05:14:56 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	ft_sac(t_list **head_a)
+int	ft_sa(t_list **head_a)
+{
+	if (*head_a && (*head_a)->next)
+	{
+		if (!ft_switch(head_a))
+			return (0);
+		ft_printf("sa\n");
+	}
+	return (1);
+}
+
+int	ft_sb(t_list **head_b)
+{
+	if (*head_b && (*head_b)->next)
+	{
+		if (!ft_switch(head_b))
+			return (0);
+		ft_printf("sb\n");
+	}
+	return (1);
+}
+
+int	ft_ss(t_list **head_a, t_list **head_b)
 {
 	if (*head_a && (*head_a)->next)
 	{
 		if (!ft_switch(head_a))
 			return (0);
 	}
-	return (1);
-}
-
-int	ft_sbc(t_list **head_b)
-{
 	if (*head_b && (*head_b)->next)
 	{
 		if (!ft_switch(head_b))
 			return (0);
 	}
+	ft_printf("ss\n");
 	return (1);
 }
 
-int	ft_ssc(t_list **head_a, t_list **head_b)
-{
-	if (*head_a && (*head_a)->next)
-	{
-		if (!ft_switch(head_a))
-			return (0);
-	}
-	if (*head_b && (*head_b)->next)
-	{
-		if (!ft_switch(head_b))
-			return (0);
-	}
-	return (1);
-}
-
-int	ft_pac(t_list **head_a, t_list **head_b)
+int	ft_pa(t_list **head_a, t_list **head_b)
 {
 	t_list	*temp;
 	t_list	*b;
@@ -61,11 +64,12 @@ int	ft_pac(t_list **head_a, t_list **head_b)
 		b = *head_b;
 		*head_b = (*head_b)->next;
 		free (b);
+		ft_printf("pa\n");
 	}
 	return (1);
 }
 
-int	ft_pbc(t_list **head_a, t_list **head_b)
+int	ft_pb(t_list **head_a, t_list **head_b)
 {
 	t_list	*temp;
 	t_list	*a;
@@ -79,6 +83,7 @@ int	ft_pbc(t_list **head_a, t_list **head_b)
 		a = *head_a;
 		*head_a = (*head_a)->next;
 		free (a);
+		ft_printf("pb\n");
 	}
 	return (1);
 }

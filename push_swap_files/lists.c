@@ -6,11 +6,11 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 22:43:22 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 02:58:21 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 06:12:57 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 /* void	ft_args_into_stack(int argc, char *argv[], t_list **head_a)
 {
@@ -57,6 +57,7 @@ int	ft_separgs(int argc, char *argv[], t_list **head)
 		if (ft_equal(&(argv[i]), ""))
 		{
 			ft_printf("Error\n");
+			ft_lstclear(head, free);
 			return (0);
 		}
 		temp = ft_split(argv[i], ' ');

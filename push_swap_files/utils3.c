@@ -6,11 +6,11 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 15:26:22 by maggie            #+#    #+#             */
-/*   Updated: 2023/08/12 02:39:53 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 05:34:18 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_top(t_list **head_a, t_list **head_b, t_list *cheapest)
 {
@@ -36,6 +36,25 @@ void	ft_downup(t_list **head_a, t_list **head_b, t_list *cheapest)
 	while (upcost_b-- > 0)
 		ft_rb(head_b);
 }
+
+int	ft_equal(char **str1, const char str2[])
+{
+	size_t	i;
+
+	i = 0;
+	while ((*str1)[i] && str2[i])
+	{
+		if ((*str1)[i] != str2[i])
+			return (0);
+		i++;
+	}
+	if ((*str1)[i] && !str2[i])
+		return (0);
+	if (str2[i] && !((*str1)[i]))
+		return (0);
+	return (1);
+}
+
 
 /* 	if ((ch->section == TOP && ch->tar->section == TOP) || \
 	(ch->section == TOP && ch->tar->section == MIDDLE) || \

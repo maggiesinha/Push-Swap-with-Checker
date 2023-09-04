@@ -6,11 +6,11 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 02:33:42 by maggie            #+#    #+#             */
-/*   Updated: 2023/08/12 02:34:46 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 05:14:58 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_print_lists(t_list *head_a, t_list *head_b)
 {

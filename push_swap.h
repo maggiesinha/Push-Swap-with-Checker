@@ -6,7 +6,7 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 20:26:35 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 02:55:23 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 05:57:14 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	ft_updown(t_list **head_a, t_list **head_b, t_list *cheapest);
 //		Utils 3
 void	ft_downup(t_list **head_a, t_list **head_b, t_list *cheapest);
 void	ft_top(t_list **head_a, t_list **head_b, t_list *cheapest);
+int		ft_equal(char **str1, const char str2[]);
 
 // Operations
 //		Swap and Push
@@ -119,17 +120,16 @@ int		ft_pac(t_list **head_a, t_list **head_b);
 int		ft_pbc(t_list **head_a, t_list **head_b);
 
 //		Rotate
-void	ft_rac(t_list **head_a);
-void	ft_rbc(t_list **head_b);
-void	ft_rrc(t_list **head_a, t_list **head_b);
+int		ft_rac(t_list **head_a);
+int		ft_rbc(t_list **head_b);
+int		ft_rrc(t_list **head_a, t_list **head_b);
 
 //		Reverse Rotate
-void	ft_rrac(t_list **head_a);
-void	ft_rrbc(t_list **head_b);
-void	ft_rrrc(t_list **head_a, t_list **head_b);
+int		ft_rrac(t_list **head_a);
+int		ft_rrbc(t_list **head_b);
+int		ft_rrrc(t_list **head_a, t_list **head_b);
 
 //Bonus
-int		ft_equal(char **str1, const char str2[]);
 int		ft_compare(char **inst, t_list **head_a, t_list **head_b);
 int		ft_ordering(char **inst, t_list **head_a, t_list **head_b);
 void	ft_ok_ko(t_list *head_a, t_list *head_b);

@@ -6,11 +6,11 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 17:24:00 by mvalerio          #+#    #+#             */
-/*   Updated: 2023/08/11 19:03:53 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 05:14:31 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 size_t	ft_biggest(size_t args, ...)
 {

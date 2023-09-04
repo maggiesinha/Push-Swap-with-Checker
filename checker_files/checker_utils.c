@@ -1,34 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   checker_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 22:08:23 by mvalerio          #+#    #+#             */
-/*   Updated: 2023/09/04 03:17:38 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 05:33:56 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	ft_equal(char **str1, const char str2[])
-{
-	size_t	i;
-
-	i = 0;
-	while ((*str1)[i] && str2[i])
-	{
-		if ((*str1)[i] != str2[i])
-			return (0);
-		i++;
-	}
-	if ((*str1)[i] && !str2[i])
-		return (0);
-	if (str2[i] && !((*str1)[i]))
-		return (0);
-	return (1);
-}
 
 int	ft_compare(char **inst, t_list **head_a, t_list **head_b)
 {
@@ -91,4 +74,41 @@ int	ft_check(t_list **head_a)
 		return (0);
 	}
 	return (1);
+}
+
+char	*ft_strcpy(char *str)
+{
+	char	*copy;
+	size_t	i;
+
+	if (!str)
+		return (NULL);
+	copy = malloc(sizeof(char *) * ft_strlen(str) + 1);
+	if (!copy)
+		return (NULL);
+	i = 0;
+	while (str[i])
+	{
+		copy[i] = str[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
+}
+
+t_list	*ft_get_instr()
+{
+	t_list	*instr;
+	char	*content;
+	t_list	*new;
+
+	instr = (NULL);
+	content = get_next_line(0);
+	while (content)
+	{
+		new = ft_lstnew((char *)content);
+		ft_lstadd_back(&instr, new);
+		content = get_next_line(0);
+	}
+	return (instr);
 }
