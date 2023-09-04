@@ -6,7 +6,7 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 22:08:23 by mvalerio          #+#    #+#             */
-/*   Updated: 2023/09/04 05:33:56 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 18:32:16 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int	ft_compare(char **inst, t_list **head_a, t_list **head_b)
 	else if (ft_equal(inst, "rra\n"))
 		ft_rrac(head_a);
 	else if (ft_equal(inst, "rrb\n"))
-		ft_rrbc(head_a);
+		ft_rrbc(head_b);
 	else if (ft_equal(inst, "sa\n"))
 		ft_sac(head_a);
 	else if (ft_equal(inst, "sb\n"))
-		ft_sbc(head_a);
+		ft_sbc(head_b);
 	else if (ft_equal(inst, "pa\n"))
 		ft_pac(head_a, head_b);
 	else if (ft_equal(inst, "pb\n"))
