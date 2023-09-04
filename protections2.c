@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   protections2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvalerio <mvalerio@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 15:55:55 by maggie            #+#    #+#             */
-/*   Updated: 2023/08/22 14:04:09 by mvalerio         ###   ########.fr       */
+/*   Updated: 2023/09/04 02:50:26 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ft_check_duplicates(t_list *head)
 	}
 	return (1);
 }
+
 
 int	ft_specific_cases(t_list **head_a)
 {

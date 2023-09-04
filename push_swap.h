@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvalerio <mvalerio@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 20:26:35 by maggie            #+#    #+#             */
-/*   Updated: 2023/08/31 18:56:16 by mvalerio         ###   ########.fr       */
+/*   Updated: 2023/09/04 02:55:23 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		ft_ordered(t_list *lst);
 
 // Lists
 void	ft_arrtostack(t_list **head, char **array);
-void	ft_separgs(int argc, char *argv[], t_list **head);
+int		ft_separgs(int argc, char *argv[], t_list **head);
 
 // Utils
 //		Utils 1
@@ -127,5 +127,14 @@ void	ft_rrc(t_list **head_a, t_list **head_b);
 void	ft_rrac(t_list **head_a);
 void	ft_rrbc(t_list **head_b);
 void	ft_rrrc(t_list **head_a, t_list **head_b);
+
+//Bonus
+int		ft_equal(char **str1, const char str2[]);
+int		ft_compare(char **inst, t_list **head_a, t_list **head_b);
+int		ft_ordering(char **inst, t_list **head_a, t_list **head_b);
+void	ft_ok_ko(t_list *head_a, t_list *head_b);
+int		ft_check(t_list **head_a);
+t_list	*ft_get_instr();
+
 
 #endif

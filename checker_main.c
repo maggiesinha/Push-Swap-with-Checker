@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   checker_main.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/08 19:52:15 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 02:58:30 by maggie           ###   ########.fr       */
+/*   Created: 2023/09/04 02:35:48 by maggie            #+#    #+#             */
+/*   Updated: 2023/09/04 02:59:11 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,29 @@ int	main(int argc, char *argv[])
 {
 	t_list	*head_a;
 	t_list	*head_b;
+	int		a;
+	t_list	*instructions;
+	char	*current_inst;
 
 	head_a = 0;
 	head_b = 0;
 	if (argc <= 1)
 		return (0);
-	if (!ft_separgs(argc, argv, &head_a))
+	if (!ft_separgs(argc, argv, &head_a) || !ft_check(&head_a))
 		return (0);
-	if (ft_specific_cases(&head_a))
+	instructions = ft_get_instr();
+	while (instructions)
 	{
-		ft_lstclear(&head_a, free);
-		return (0);
+		current_inst = (char *)(instructions->content);
+		a = ft_ordering(&current_inst, &head_a, &head_b);
+		if (!a)
+			{
+				ft_printf("Error\n");
+				return (0);
+			}
+		else if (a == 2)
+			return (0);
+		instructions = instructions->next;
 	}
-	while (ft_lstlen(head_a) > 3)
-		ft_pb(&head_a, &head_b);
-	ft_sort_small(&head_a);
-	ft_refresh_nodes(head_a, head_b);
-	while (head_b)
-	{
-		ft_top(&head_a, &head_b, ft_cheapest(head_b));
-		ft_pa(&head_a, &head_b);
-		ft_refresh_nodes(head_a, head_b);
-	}
-	ft_finalize(&head_a);
-	ft_lstclear(&head_a, free);
+	ft_ok_ko(head_a, head_b);
 }

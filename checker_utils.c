@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvalerio <mvalerio@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 22:08:23 by mvalerio          #+#    #+#             */
-/*   Updated: 2023/08/31 18:56:21 by mvalerio         ###   ########.fr       */
+/*   Updated: 2023/09/04 03:17:38 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,31 +91,4 @@ int	ft_check(t_list **head_a)
 		return (0);
 	}
 	return (1);
-}
-
-int	main(int argc, char *argv[])
-{
-	t_list	*head_a;
-	t_list	*head_b;
-	char	*inst;
-	int		a;
-
-	head_a = 0;
-	head_b = 0;
-	if (argc <= 1)
-		return (0);
-	ft_separgs(argc, argv, &head_a);
-	if (!ft_check(&head_a))
-		return (0);
-	inst = get_next_line(0);
-	while (inst != NULL)
-	{
-		a = ft_ordering(&inst, &head_a, &head_b);
-		if (!a)
-			break ;
-		else if (a == 2)
-			return (0);
-		inst = get_next_line(0);
-	}
-	ft_ok_ko(head_a, head_b);
 }

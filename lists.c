@@ -6,7 +6,7 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 22:43:22 by maggie            #+#    #+#             */
-/*   Updated: 2023/08/17 11:16:11 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/04 02:58:21 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ft_arrtostack(t_list **head, char **array)
 	}
 }
 
-void	ft_separgs(int argc, char *argv[], t_list **head)
+int	ft_separgs(int argc, char *argv[], t_list **head)
 {
 	char	**temp;
 	int		i;
@@ -54,8 +54,14 @@ void	ft_separgs(int argc, char *argv[], t_list **head)
 	i = 0;
 	while (++i < argc)
 	{
+		if (ft_equal(&(argv[i]), ""))
+		{
+			ft_printf("Error\n");
+			return (0);
+		}
 		temp = ft_split(argv[i], ' ');
 		ft_arrtostack(head, temp);
 		free(temp);
 	}
+	return (1);
 }
