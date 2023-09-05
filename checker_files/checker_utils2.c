@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_checker.c                                   :+:      :+:    :+:   */
+/*   checker_utils2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/16 11:33:29 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/05 14:10:41 by maggie           ###   ########.fr       */
+/*   Created: 2023/09/05 14:12:12 by maggie            #+#    #+#             */
+/*   Updated: 2023/09/05 14:22:38 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_rac(t_list **head_a)
+char	*ft_strcpy(char *str)
 {
-	if (!(*head_a) || !((*head_a)->next))
-		return (10);
-	ft_rotate(head_a);
-	return (0);
+	char	*copy;
+	size_t	i;
+
+	if (!str)
+		return (NULL);
+	copy = malloc(sizeof(char *) * ft_strlen(str) + 1);
+	if (!copy)
+		return (NULL);
+	i = 0;
+	while (str[i])
+	{
+		copy[i] = str[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
 }
 
-int	ft_rbc(t_list **head_b)
+void	ft_freememory(t_list **head_a, t_list **head_b, t_list **instructions)
 {
-	if (!(*head_b) || !((*head_b)->next))
-		return (10);
-	ft_rotate(head_b);
-	return (0);
-}
-
-int	ft_rrc(t_list **head_a, t_list **head_b)
-{
-	if ((*head_a) && ((*head_a)->next))
-		ft_rotate(head_a);
-	if ((*head_b) && ((*head_b)->next))
-		ft_rotate(head_b);
-	return (0);
+	ft_lstclear(instructions, free);
+	ft_lstclear(head_a, free);
+	ft_lstclear(head_b, free);
 }

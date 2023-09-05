@@ -6,7 +6,7 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 15:26:22 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 05:34:18 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/05 14:24:19 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,28 +54,3 @@ int	ft_equal(char **str1, const char str2[])
 		return (0);
 	return (1);
 }
-
-
-/* 	if ((ch->section == TOP && ch->tar->section == TOP) || \
-	(ch->section == TOP && ch->tar->section == MIDDLE) || \
-	(ch->tar->section == TOP && ch->section == MIDDLE) || \
-	(ch->section == MIDDLE && ch->tar->section == MIDDLE))
-		ft_rtop(h_a, h_b, ch);
-	else if ((ch->section == BOTTOM && ch->tar->section == BOTTOM) || \
-	(ch->section == MIDDLE && ch->tar->section == BOTTOM) || \
-	(ch->section == BOTTOM && ch->tar->section == MIDDLE))
-		ft_rrtop(h_a, h_b, ch);
-	else if ((ch->tar->cost + ch->cost > ch->reverse_cost && \
-	ch->section == TOP))
-		ft_rrtop(h_a, h_b, ch);
-	else if (ch->tar->cost + ch->cost > ch->tar->reverse_cost && \
-	ch->section == BOTTOM)
-		ft_rrtop(h_a, h_b, ch);
-	else if (ch->tar->cost + ch->cost > ch->tar->reverse_cost && \
-	ch->section == TOP)
-		ft_rtop(h_a, h_b, ch);
-	else if (ch->tar->cost + ch->cost > ch->reverse_cost && \
-	ch->section == BOTTOM)
-		ft_rtop(h_a, h_b, ch);
-	else
-		ft_dif(h_a, h_b, ch); */

@@ -1,16 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/08 19:52:15 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 05:14:51 by maggie           ###   ########.fr       */
+/*   Created: 2023/09/05 14:29:05 by maggie            #+#    #+#             */
+/*   Updated: 2023/09/05 14:35:35 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	ft_big_sort(t_list **head_a, t_list **head_b)
+{
+	while (ft_lstlen(*head_a) > 3)
+		ft_pb(head_a, head_b);
+	ft_sort_small(head_a);
+	ft_refresh_nodes(*head_a, *head_b);
+	while (*head_b)
+	{
+		ft_top(head_a, head_b, ft_cheapest(*head_b));
+		ft_pa(head_a, head_b);
+		ft_refresh_nodes(*head_a, *head_b);
+	}
+	ft_finalize(head_a);
+}
 
 int	main(int argc, char *argv[])
 {
@@ -28,16 +43,6 @@ int	main(int argc, char *argv[])
 		ft_lstclear(&head_a, free);
 		return (0);
 	}
-	while (ft_lstlen(head_a) > 3)
-		ft_pb(&head_a, &head_b);
-	ft_sort_small(&head_a);
-	ft_refresh_nodes(head_a, head_b);
-	while (head_b)
-	{
-		ft_top(&head_a, &head_b, ft_cheapest(head_b));
-		ft_pa(&head_a, &head_b);
-		ft_refresh_nodes(head_a, head_b);
-	}
-	ft_finalize(&head_a);
+	ft_big_sort(&head_a, &head_b);
 	ft_lstclear(&head_a, free);
 }

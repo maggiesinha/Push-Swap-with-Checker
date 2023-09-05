@@ -6,7 +6,7 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 15:55:55 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 05:14:49 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/05 14:17:57 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int	ft_check_duplicates(t_list *head)
 	}
 	return (1);
 }
-
 
 int	ft_specific_cases(t_list **head_a)
 {

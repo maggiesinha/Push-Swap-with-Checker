@@ -6,7 +6,7 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 20:26:35 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 05:57:14 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/05 14:35:08 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,12 +129,15 @@ int		ft_rrac(t_list **head_a);
 int		ft_rrbc(t_list **head_b);
 int		ft_rrrc(t_list **head_a, t_list **head_b);
 
-//Bonus
+//		Checker Utils
 int		ft_compare(char **inst, t_list **head_a, t_list **head_b);
 int		ft_ordering(char **inst, t_list **head_a, t_list **head_b);
 void	ft_ok_ko(t_list *head_a, t_list *head_b);
 int		ft_check(t_list **head_a);
-t_list	*ft_get_instr();
+t_list	*ft_get_instr(void);
+
+//		Checker Utils 2
+void	ft_freememory(t_list **head_a, t_list **head_b, t_list **instructions);
 
 
 #endif

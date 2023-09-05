@@ -6,12 +6,11 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 22:08:23 by mvalerio          #+#    #+#             */
-/*   Updated: 2023/09/04 18:32:16 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/05 14:11:45 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
 
 int	ft_compare(char **inst, t_list **head_a, t_list **head_b)
 {
@@ -76,27 +75,7 @@ int	ft_check(t_list **head_a)
 	return (1);
 }
 
-char	*ft_strcpy(char *str)
-{
-	char	*copy;
-	size_t	i;
-
-	if (!str)
-		return (NULL);
-	copy = malloc(sizeof(char *) * ft_strlen(str) + 1);
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (str[i])
-	{
-		copy[i] = str[i];
-		i++;
-	}
-	copy[i] = '\0';
-	return (copy);
-}
-
-t_list	*ft_get_instr()
+t_list	*ft_get_instr(void)
 {
 	t_list	*instr;
 	char	*content;

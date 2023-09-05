@@ -6,7 +6,7 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 04:15:24 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 15:24:34 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/05 14:10:29 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_ssc(t_list **head_a, t_list **head_b)
 		ft_switch(head_b);
 	if (*head_a && (*head_a)->next)
 		ft_switch(head_a);
-		return (0);
+	return (0);
 }
 
 int	ft_pac(t_list **head_a, t_list **head_b)

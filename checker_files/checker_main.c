@@ -6,25 +6,18 @@
 /*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 02:35:48 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/04 18:36:23 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/05 14:12:37 by maggie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-void	ft_freememory(t_list **head_a, t_list **head_b, t_list **instructions)
-{
-	ft_lstclear(instructions, free);
-	ft_lstclear(head_a, free);
-	ft_lstclear(head_b, free);
-}
 
 int	ft_do_instructions(t_list **instructions, t_list **head_a, t_list **head_b)
 {
 	char	*current_inst;
 	int		a;
 	t_list	*temp;
-	
+
 	temp = *instructions;
 	while (temp)
 	{

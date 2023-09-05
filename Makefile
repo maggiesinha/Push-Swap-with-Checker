@@ -6,7 +6,7 @@
 #    By: maggie <maggie@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/31 17:22:06 by mvalerio          #+#    #+#              #
-#    Updated: 2023/09/04 05:40:34 by maggie           ###   ########.fr        #
+#    Updated: 2023/09/05 14:36:28 by maggie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,9 @@ push_swap_files/utils2.c push_swap_files/utils3.c \
 
 SRCBONUS = checker_files/swap_and_push_checker.c checker_files/checker_utils.c \
 checker_files/reverse_rotate_checker.c  checker_files/rotate_checker.c \
+checker_files/checker_utils2.c
 
-PUSHSWAP = push_swap_files/push_swap.c
+PUSHSWAP = push_swap_files/push_swap_main.c
 
 CHECKER = checker_files/checker_main.c
 
