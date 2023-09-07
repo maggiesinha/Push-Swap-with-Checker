@@ -139,5 +139,4 @@ t_list	*ft_get_instr(void);
 //		Checker Utils 2
 void	ft_freememory(t_list **head_a, t_list **head_b, t_list **instructions);
 
-
 #endif

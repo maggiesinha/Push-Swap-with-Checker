@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mvalerio <mvalerio@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:29:05 by maggie            #+#    #+#             */
-/*   Updated: 2023/09/05 14:35:35 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/07 13:34:53 by mvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ int	main(int argc, char *argv[])
 
 	head_a = 0;
 	head_b = 0;
-	if (argc <= 1)
-		return (0);
-	if (!ft_separgs(argc, argv, &head_a))
+	if (argc <= 1 || !ft_separgs(argc, argv, &head_a))
 		return (0);
 	if (ft_specific_cases(&head_a))
 	{

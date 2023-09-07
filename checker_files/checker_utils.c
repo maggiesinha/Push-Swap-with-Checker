@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maggie <maggie@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mvalerio <mvalerio@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 22:08:23 by mvalerio          #+#    #+#             */
-/*   Updated: 2023/09/05 14:11:45 by maggie           ###   ########.fr       */
+/*   Updated: 2023/09/07 13:35:55 by mvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ int	ft_ordering(char **inst, t_list **head_a, t_list **head_b)
 void	ft_ok_ko(t_list *head_a, t_list *head_b)
 {
 	if (ft_ordered(head_a) && !head_b)
-		ft_printf("OK");
+		ft_printf("OK\n");
 	else
-		ft_printf("KO");
+		ft_printf("KO\n");
 }
 
 int	ft_check(t_list **head_a)

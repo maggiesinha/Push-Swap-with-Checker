@@ -20,7 +20,7 @@ int	ft_sac(t_list **head_a)
 }
 
 int	ft_sbc(t_list **head_b)
-{	
+{
 	if (*head_b && (*head_b)->next)
 		ft_switch(head_b);
 	return (0);
